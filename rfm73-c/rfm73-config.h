@@ -1,42 +1,24 @@
-//
-// Hi-Tech Lite include file for DB038 board with 16F887:
-// using an (external) RFM70 transciever
-//
-// Loosely based on the example application provided by HopeRF
-//
-//
-// $Id: rfm73-config.h,v 1.1 2013/06/12 06:45:52 Staples Exp $
-//
-// (c) Wouter van Ooijen - wouter@voti.nl
-//
-// Copying and distribution of this file, with or without modification,
-// are permitted in any medium without royalty provided the copyright
-// notice and this notice are preserved.  This file is offered as-is,
-// without any warranty.
-//
+/*
+	Biblioteka RFM70 dla AVR'ów oparta na projekcie Daniela z http:://projects.web4clans.com
 
-#ifndef _DB038_RFM70_H_
-#define _DB038_RFM70_H_
+	Autor: freakone
+	WWW: freakone.pl
+	@: kamil@freakone.pl
+*/
 
-#include "db038.h"
+#include "uart.h" // jeœli chcemy korzystaæ z uarta
+#define DEBUG 1 // jeœli chcemy debugowaæ - uart równie¿ musi byæ zainkludowany
 
-#define RFM70_SCK( x )   PIN_COPY( PORTC, 0, (x) ) 
-#define RFM70_MOSI( x )  PIN_COPY( PORTC, 1, (x) )
-#define RFM70_MISO       ( RC2 )
-#define RFM70_CSN( x )   PIN_COPY( PORTC, 3, (x) )
-#define RFM70_CE( x )    PIN_COPY( PORTC, 4, (x) )
+//RFM70
+#define DDR_SPI DDRB
+#define PORT_SPI PORTB
+#define SCK  PB7
+#define MISO PB6
+#define MOSI PB5
+#define CE   PB4
+#define CSN  PB3
 
-#define RFM70_PIN_DIRECTION { \
-   TRISC0 = 0; \
-   TRISC1 = 0; \
-   TRISC2 = 1; \
-   TRISC3 = 0; \
-   TRISC4 = 0; \
-}
-
-#define RFM70_WAIT_US( x ) WAIT_US( x )
-#define RFM70_WAIT_MS( x ) wait_ms( x )
-
-#include "rfm70.h"
-
-#endif
+//DIODA
+#define DDR_BLINK DDRD
+#define PORT_BLINK PORTD
+#define BLINK PD7

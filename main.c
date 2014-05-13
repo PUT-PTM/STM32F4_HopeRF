@@ -6,19 +6,24 @@
 #include "stm32f4xx_tim.h"
 #include "rfm73.h"
 
-void timer_4_init(void);
-void gpio_init(void);
+#include <inttypes.h>
+#include <avr/io.h>
+#include <util/delay.h>
 
-int main(void)
+#include "rfm73.h"
+
+int main()
 {
-SystemInit();
-SystemCoreClockUpdate();
+    uint8_t test[]={'t', 'e', 's', 't','y'};
+    initRFM(); //inicjalizacja RFM70
 
-gpio_init();
+    setModeTX(); //tryb nadawania
+    setChannel(8); // kana³ 8
+    setPower(3); // maksymalna moc (0: -10dBm | 1: -5dBm | 2: 0dBm | 3: 5dBm)
 
-
-while(1)
-   {
-}
-
+    while (1)
+    {
+        sendPayload(test, 5, 0); //tablica, dlugosc, 0 - bez potwierdzenia | 1 - z potwierdzeniem
+        _delay_ms(20);
+    }
 }

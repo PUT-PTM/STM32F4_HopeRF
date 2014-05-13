@@ -7,6 +7,35 @@
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h" lastModified="145f5ed2b1a">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="145f5ed2b21">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="145f5ece9f2">
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_tim.c" lastModified="145f5ed3399">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f4xx.h" lastModified="145f5ecea10">
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h" lastModified="145f5ed1ea0">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="145f5f26237">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="145f5ed1f5d">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+   </includePath>
+   <includePath signature="/I..\..\..\..\..\Users\linkinheroes\Documents\GitHub /I..\..\..\..\..\Users\linkinheroes\Documents\GitHub\STM32F4_HopeRF\cmsis /I..\..\..\..\..\Users\linkinheroes\Documents\GitHub\STM32F4_HopeRF\cmsis_lib\include /I..\..\..\..\..\Users\linkinheroes\Documents\GitHub\STM32F4_HopeRF\cmsis_lib /I..\..\..\..\..\Users\linkinheroes\Documents\GitHub\STM32F4_HopeRF /I..\..\..\..\..\Users\linkinheroes\Documents\GitHub\STM32F4_HopeRF\cmsis_boot /I..\..\..\..\..\Users\linkinheroes\Documents\GitHub\STM32F4_HopeRF\rfm73-c">
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h" lastModified="145f5ed3398">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h" lastModified="145f5ed2b1a">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
       <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="145f5ecee4e">
       </source>
       <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="145f5ecee58">
@@ -20,6 +49,13 @@
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_tim.c" lastModified="145f5ed3399">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\main.c" lastModified="145f754cadd">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h"/>
+         <include file="..\..\..\rfm73-c\rfm73.h"/>
       </source>
       <source file="..\..\..\cmsis\core_cm4.h" lastModified="145f5ecee3a">
          <include file="..\..\..\cmsis\core_cmInstr.h"/>
@@ -48,6 +84,8 @@
       </source>
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="145f5ed1f5d">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\rfm73-c\rfm73.h" lastModified="145f183d437">
       </source>
    </includePath>
 </dependencies>
